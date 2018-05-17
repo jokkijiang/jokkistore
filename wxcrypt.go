@@ -32,7 +32,7 @@ func (e showError) Error() string {
 	return fmt.Sprintf("{code: %v, error: \"%v\"}", e.errorCode, e.errorMsg)
 }
 
-// Decrypt Weixin APP's AES Data
+// Decrypt WeChat APP's AES Data
 // If isJSON is true, Decrypt return JSON type.
 // If isJSON is false, Decrypt return map type.
 func (wxCrypt *WxDataCrypt) Decrypt(encryptedData string, iv string, isJSON bool) (interface{}, error) {
