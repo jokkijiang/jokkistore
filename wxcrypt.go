@@ -33,7 +33,7 @@ func (e showError) Error() string {
 }
 
 // Decrypt WeChat APP's AES Data
-// If isJSON is true, Decrypt return JSON type.
+// If isJSON is trueDecrypt return JSON type.
 // If isJSON is false, Decrypt return map type.
 func (wxCrypt *WxDataCrypt) Decrypt(encryptedData string, iv string, isJSON bool) (interface{}, error) {
 	if len(wxCrypt.SessionKey) != 24 {
